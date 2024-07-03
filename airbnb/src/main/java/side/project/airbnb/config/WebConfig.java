@@ -66,6 +66,7 @@ public class WebConfig {
                 .authorizeHttpRequests(requests -> requests
                         .requestMatchers(HttpMethod.GET, "/").permitAll()
                         .requestMatchers(HttpMethod.GET, "/detail/*").permitAll()
+                        .requestMatchers(HttpMethod.POST, "/checkLogin").permitAll()
                         .anyRequest().authenticated()
                 )
                 .build();
